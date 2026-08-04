@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>学習アプリ開発</title>
-<meta name="description" content="高校「情報1」対応の学習ドリルアプリを開発しています。進数ノック-RadixDrillほか、今後もリリース予定。">
+<meta name="description" content="高校「情報1」対応の学習ドリルアプリを開発しています。進数ノック-RadixDrill、ロジックサーキットほか、今後もリリース予定。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -18,6 +18,7 @@
     --teal:#2C6B57;
     --teal-deep:#1D4A3C;
     --amber:#E2A23B;
+    --amber-deep:#B97F26;
     --mono: 'JetBrains Mono', monospace;
     --sans: 'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
   }
@@ -234,6 +235,10 @@
     text-align:center;
     flex-shrink:0;
   }
+  .app-icon.amber{
+    background:linear-gradient(155deg, var(--amber), var(--amber-deep));
+    color:#2A1E0C;
+  }
   .app-card h3{
     font-size:19px;
     margin-bottom:4px;
@@ -278,6 +283,12 @@
   }
   .store-badge:hover{background:var(--teal-deep); transform:translateY(-1px);}
   .store-badge svg{width:16px; height:16px; fill:#fff;}
+  .store-badge.soon{
+    background:var(--line);
+    color:var(--ink-soft);
+    cursor:default;
+  }
+  .store-badge.soon:hover{background:var(--line); transform:none;}
 
   /* future apps */
   .roadmap{
@@ -316,6 +327,10 @@
   .link-card:hover{border-color:var(--teal); transform:translateY(-2px);}
   .link-card .lc-title{font-weight:700; font-size:15px; margin-bottom:4px;}
   .link-card .lc-sub{font-size:13px; color:var(--ink-soft);}
+  .link-card.muted{
+    cursor:default;
+  }
+  .link-card.muted:hover{border-color:var(--line); transform:none;}
 
   footer{
     padding:36px 0 50px;
@@ -361,7 +376,7 @@
 <div class="wrap">
   <header>
     <div class="nav">
-      <div class="brand">StudyProof</span></div>
+      <div class="brand">StudyProof</div>
       <a href="/privacy-policy/">プライバシーポリシー</a>
     </div>
   </header>
@@ -419,8 +434,31 @@
 
   <section class="reveal">
     <div class="marker">02 · 0b0010 · 0x02</div>
+    <h2>ロジックサーキット</h2>
+    <p class="section-lede">「情報1」の論理回路対応。AND・OR・NOTだけで回路を組み立て、0と1の信号が配線を流れる様子を見ながら体験的に学べる学習アプリです。</p>
+
+    <div class="app-card">
+      <div class="app-icon amber">∧∨¬</div>
+      <div>
+        <h3>ロジックサーキット</h3>
+        <p class="app-tag">教育 · 無料（広告あり / 広告非表示のアプリ内購入あり）</p>
+        <ul class="feature-list">
+          <li>AND・OR・NOTの3つのゲートだけで回路を組み立て</li>
+          <li>0と1の信号が配線を流れる様子をアニメーションで可視化</li>
+          <li>真理値表を自動生成し、回路の性質をその場で確認</li>
+          <li>フリー作成モードでは制限なく自由に回路を実験可能</li>
+          <li>真理値表穴埋め・回路作成など複数の出題パターンに対応</li>
+          <li>データは端末内で完結、サーバー送信なし</li>
+        </ul>
+        <span class="store-badge soon">近日公開 · App Store</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="marker">03 · 0b0011 · 0x03</div>
     <h2>StudyProofについて</h2>
-    <p class="section-lede">科目のつまずきを、繰り返し解くことで解消する。そんな学習ドリルアプリを、コツコツと開発しています。進数ノックはその第一弾です。今後も別の科目・別のつまずきポイントに向けたアプリをリリースしていく予定です。</p>
+    <p class="section-lede">科目のつまずきを、繰り返し解くことで解消する。そんな学習ドリルアプリを、コツコツと開発しています。進数ノックはその第一弾、ロジックサーキットが第二弾です。今後も別の科目・別のつまずきポイントに向けたアプリをリリースしていく予定です。</p>
     <div class="roadmap">
       <span class="dot"></span>
       次のアプリ、準備中です。
@@ -428,7 +466,7 @@
   </section>
 
   <section class="reveal">
-    <div class="marker">03 · 0b0011 · 0x03</div>
+    <div class="marker">04 · 0b0100 · 0x04</div>
     <h2>リンク</h2>
     <div class="link-grid">
       <a class="link-card" href="/privacy-policy/">
@@ -439,6 +477,10 @@
         <div class="lc-title">App Store</div>
         <div class="lc-sub">進数ノック-RadixDrillのページへ</div>
       </a>
+      <div class="link-card muted">
+        <div class="lc-title">App Store（近日公開）</div>
+        <div class="lc-sub">ロジックサーキットのページへ</div>
+      </div>
     </div>
   </section>
 
