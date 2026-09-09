@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StudyProof — 学習アプリ開発</title>
-<meta name="description" content="高校「情報1」対応の学習ドリルアプリを開発しています。進数ノック-RadixDrill、ロジックサーキットほか、今後もリリース予定。">
+<meta name="description" content="高校「情報1」対応の学習ドリルアプリを開発しています。進数ノック-RadixDrill、ロジックサーキット、クイズをライブ配信するQuizJetほか、今後もリリース予定。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -20,6 +20,8 @@
     --primary-tint: #EAEFFD;
     --amber:      #E19A2E;
     --amber-tint: #FCF2E1;
+    --teal:      #17897B;
+    --teal-tint: #E1F2EF;
     --mono: 'JetBrains Mono', monospace;
     --sans: 'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
   }
@@ -231,6 +233,7 @@
   }
   .product-icon.blue{ background:var(--primary-tint); }
   .product-icon.amber{ background:var(--amber-tint); }
+  .product-icon.teal{ background:var(--teal-tint); }
   .product-card h3{ font-size:19px; margin-bottom:6px; }
   .product-tagline{ font-size:13.5px; color:var(--ink-soft); }
   .product-status{
@@ -243,6 +246,7 @@
   }
   .product-status.live{ background:#E4F5EA; color:#1D7A45; }
   .product-status.soon{ background:var(--bg-soft); color:var(--ink-soft); }
+  .product-status.review{ background:var(--teal-tint); color:#0F6A5E; }
   .feature-list{ list-style:none; display:grid; gap:10px; }
   .feature-list li{
     font-size:14px;
@@ -259,6 +263,7 @@
     background:var(--primary);
   }
   .product-card.amber-theme .feature-list li::before{ background:var(--amber); }
+  .product-card.teal-theme .feature-list li::before{ background:var(--teal); }
   .product-foot{
     margin-top:auto;
     display:flex;
@@ -398,8 +403,8 @@
           <div class="stat-label">対応科目</div>
         </div>
         <div>
-          <div class="stat-num">3</div>
-          <div class="stat-label">開発中アプリ</div>
+          <div class="stat-num">4</div>
+          <div class="stat-label">審査中・開発中アプリ</div>
         </div>
       </div>
     </div>
@@ -457,6 +462,28 @@
             <a class="link-btn" href="https://apps.apple.com/jp/app/id6797250245" target="_blank" rel="noopener">App Storeで見る →</a>
           </div>
         </article>
+
+        <article class="product-card teal-theme reveal">
+          <div class="product-icon teal" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3.5 12.4 20 4.5l-4.6 15.6-3.4-5.6-5.5-2.1Z" stroke="#17897B" stroke-width="2" stroke-linejoin="round"/><path d="m12 14.5 3.6-4.4" stroke="#17897B" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <span class="product-status review">審査中</span>
+            <h3 style="margin-top:10px;">QuizJet</h3>
+            <p class="product-tagline">同じWi-Fiの端末へ、クイズをライブ配信する</p>
+          </div>
+          <ul class="feature-list">
+            <li>外部サーバーを使わず、同じWi-Fi内の最大60台へ直接配信</li>
+            <li>回答者はコードとニックネームだけで参加(登録・ログイン不要)</li>
+            <li>回答分布・早押しランキング・総合順位をその場で発表</li>
+            <li>AI(Gemini / 内蔵AI)で問題文・選択肢・正解をまとめて作成</li>
+            <li>参加したクイズは端末内に残り、あとから復習できる</li>
+          </ul>
+          <div class="product-foot">
+            <span class="product-price">無料(出題者モードはサブスク)</span>
+            <span class="link-btn disabled">まもなく公開</span>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -487,6 +514,13 @@
         <div class="roadmap-item pending">
           <span class="dot"></span>
           <div>
+            <strong>QuizJet</strong>
+            <span>審査中 · まもなく App Store</span>
+          </div>
+        </div>
+        <div class="roadmap-item pending">
+          <span class="dot"></span>
+          <div>
             <strong>次のアプリ</strong>
             <span>WindsTuner・瞬間英作シャウト・StudyProof</span>
           </div>
@@ -511,7 +545,7 @@
         <ul>
           <li><a href="https://apps.apple.com/jp/app/id6796209161" target="_blank" rel="noopener">進数ノック-RadixDrill</a></li>
           <li><a href="https://apps.apple.com/jp/app/id6797250245" target="_blank" rel="noopener">ロジックサーキット</a></li>
-
+          <li><span style="color:var(--ink-soft);">QuizJet(審査中)</span></li>
         </ul>
       </div>
       <div class="footer-col">
